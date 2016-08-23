@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Frequency Adder</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div>
+			<br>
+			<header> Frequency Adder Web App </header>
+		</div>
+		<div class="background">
+			<div class="front">
+				<form action="FreqServlet" method="post"> 
+					                       
+                       <button class="button" type="submit" name="btn" value="PlayorFile">Play or File</button>
+                       <br><br>
+
+						
+ 						
+                        Frequency 1: <input type="number" id="f1freq" name="First Freq"  min="0" max="48000" value="0" placeholder="0 to 48000" required> Hz &nbsp; &nbsp; &nbsp; &nbsp;       
+                        Amplitude: 
+                        <select name="Amplitude1" id="f1amp">
+							<option value="0.1">0.1</option>
+  							<option value="0.2" >0.2</option>
+  							<option value="0.3">0.3</option>
+  							<option value="0.4">0.4</option>
+  							<option value="0.5" >0.5</option>
+  							<option value="0.6">0.6</option>
+  							<option value="0.7">0.7</option>
+ 	 						<option value="0.8"selected="selected">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1.0">1.0</option></select> &nbsp;  &nbsp;
+
+                        Phase: <input type="number" id="f1phase" name="Phase1"  min="0" max="359" value="0" placeholder="0 to 359" required> Deg &nbsp; &nbsp; &nbsp; 
+                        <br><br>
+
+         
+						Frequency 2: <input type="number" id="f2freq" name="Second Freq" min="0" max="48000" value="0" placeholder="1 to 48000" required> Hz &nbsp; &nbsp; &nbsp; &nbsp;
+                        Amplitude: 
+                        <select name="Amplitude2" id="f2amp" >
+							<option value="0.1">0.1</option>
+  							<option value="0.2" >0.2</option>
+  							<option value="0.3">0.3</option>
+  							<option value="0.4">0.4</option>
+  							<option value="0.5" >0.5</option>
+  							<option value="0.6">0.6</option>
+  							<option value="0.7">0.7</option>
+ 	 						<option value="0.8"selected="selected">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1.0">1.0</option></select> &nbsp;  &nbsp;
+
+                            Phase: <input type="number" id="f2phase" name="Phase2"  min="0" max="359" value="0" placeholder="0 to 359" required> Deg &nbsp; &nbsp; &nbsp;
+                            <br><br> 
+                            Signal Type:&nbsp; <select name="Signal">
+  								<option value="Sine">Sine</option>
+  								<option value="Triangle">Triangle</option>
+  								<option value="Square">Square</option></select> &nbsp;&nbsp;
+						
+                        <input type="radio" name="selection" value="Frequency1" checked="checked"> Frequency 1 &nbsp; &nbsp;
+                        <input type="radio" name="selection" value="Frequency2"> Frequency 2 &nbsp; &nbsp;
+						<input type="radio" name="selection" value="Sum"> Sum  
+						<br><br>
+
+						
+						
+						Sampling Rate:
+						<select name="Sample">
+							<option value="8">8</option>
+  							<option value="16" >16</option>
+  							<option value="22.05">22.05</option>
+  							<option value="32">32</option>
+  							<option value="44.1" selected="selected">44.1</option>
+  							<option value="48">48</option>
+  							<option value="88.2">88.2</option>
+ 	 						<option value="96">96</option>
+						</select> &nbsp;  &nbsp;
+						
+						
+						Duration: <input type="number" name="Duration" value="4" disabled> seconds &nbsp;&nbsp;
+						<br><br>
+						
+                                <input type="radio" name="action" value="Listen" checked="checked"> Listen &nbsp; &nbsp;
+                                <input type="radio" name="action" value="File"> File &nbsp; &nbsp;
+                                <input type="text" name="Filename" value="untitled" placeholder="Enter Name" required>
+                </form>
+			</div>
+			
+		</div>
+	</body>
+</html>
